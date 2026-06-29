@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS - More on Selectors</title>
+    <style>
+         /*.box:first-child{
+            background-color:cornflowerblue;
+        } 
+        */
+
+        /* .box::first-line{
+            color: yellow;
+        } 
+        */
+
+         /*.boxes *{
+            color: grey;
+            border: 2px solid black;
+        }
+        */
+
+       /* p, a, .box, [data-color="primary"]{
+            padding-top: 45px;
+        } */
+
+        /* .box:nth-child(odd){
+            background-color: blue;
+        } */
+
+        /* .box:nth-last-child(2){
+            background-color: tealblue;
+        } */
+        body{background-color: beige;}
+
+        .boxes::before {
+            content: "Full-Stack-AI-Engineer";
+            color:crimson;
+            font-size: 25px;
+            border: 2px solid black;
+            letter-spacing: 5px;
+        }
+
+        .boxes::after {
+            content: "TheMohitBuilds ~";
+            color: red;
+            font-size: 17px;
+            
+            
+        }
+
+        ::selection {
+            background-color: black;
+            color: cornflowerblue;
+        }
+
+        .box::first-letter {
+            color: peru;
+            font-size: 45px;
+        }
+
+        input::placeholder {
+            color: rgb(100, 100, 111);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="boxes">
+        <p><div data-color="primary" class="box">Code • Create • Innovate</div></p>
+        <p><div class="box">Code • Learn • Build • Repeat </div></p>
+        <p><div class="box">Hello from Mohit!</div></p>
+        <p>Enter: <input type="text" placeholder="Enter your name here"></p>
+    
+    </div>
+
+</body>
+
+</html>
