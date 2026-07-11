@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercedes-Benz Navbar</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            /* Light background to contrast the dark navbar */
+            background-color: lightblue; 
+        }
+
+        /* Navbar Container */
+        .mb-navbar {
+            background-color: #111111; 
+            color: #ffffff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 40px;
+            height: 100px;
+            position: relative;
+        }
+
+        /* Flex sections to ensure exact center alignment for logo */
+        .nav-left, .nav-center, .nav-right {
+            flex: 1;
+            display: flex;
+            align-items: center;
+        }
+
+        /* Left Navigation Links */
+        .nav-left {
+            justify-content: flex-start;
+            gap: 34px;
+        }
+
+        .nav-left a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            transition: color 0.2s;
+        }
+
+        .nav-left a:hover {
+            color: #aaaaaa;
+        }
+
+        /* Center Logo */
+        .nav-center img{
+            justify-content: center;
+        width: 98px;
+        }
+
+        /* Right Actions */
+        .nav-right {
+            justify-content: flex-end;
+            gap: 20px;
+        }
+
+        .nav-provider {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 16px;
+            letter-spacing: 0.5px;
+            margin-right: 8px;
+            transition: color 0.2s;
+        }
+
+        .nav-provider:hover {
+            color: #aaaaaa;
+        }
+
+        /* Icon Styles */
+        .nav-icon {
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            transition: opacity 0.2s;
+        }
+
+        .nav-icon:hover {
+            opacity: 0.7;
+        }
+
+        .nav-icon svg {
+            width: 22px;
+            height: 22px;
+        }
+
+        /* Login Section */
+        .nav-login {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+
+        .user-avatar {
+            background-color: #333333;
+            border-radius: 50%;
+            width: 38px;
+            height: 38px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .user-avatar svg {
+            width: 16px;
+            height: 16px;
+            fill: #cccccc;
+        }
+
+        .login-text-container {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.2;
+        }
+
+        .private-customer {
+            font-size: 15px;
+            color: #aaaaaa;
+        }
+
+        .login-link {
+            font-size: 15px;
+            font-weight: 500;
+        }
+        
+        .nav-login:hover .login-link {
+            color: #aaaaaa;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="mb-navbar">
+        <!-- Left Section: Text Links -->
+        <div class="nav-left">
+            <a href="#">Models</a>
+            <a href="#">Buy</a>
+            <a href="#">Services</a>
+            <a href="#">Brand</a>
+        </div>
+
+        <!-- Center Section: Mercedes Logo -->
+        <div class="nav-center">
+            <img src="https://assets.oneweb.mercedes-benz.com/plugin/hp-assets/latest/images/brands/mercedes-benz/logo-140years.webp" alt="">
+            
+        </div>
+
+        <!-- Right Section: Icons and Login -->
+        <div class="nav-right">
+            <a href="#" class="nav-provider">Provider/...</a>
+            
+            <!-- Search Icon -->
+            <div class="nav-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"/>
+                    <path d="M21 21l-4.35-4.35"/>
+                </svg>
+            </div>
+
+            <!-- Heart Icon -->
+            <div class="nav-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                </svg>
+            </div>
+
+            <!-- Location Pin Icon -->
+            <div class="nav-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                    <circle cx="12" cy="10" r="3"/>
+                </svg>
+            </div>
+
+            <!-- Login / Profile Area -->
+            <div class="nav-login">
+                <div class="user-avatar">
+                    
+                    <!-- User Silhouette SVG -->
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                    </svg>
+                </div>
+                <div class="login-text-container">
+                    <span class="private-customer">Private customer</span>
+                    <span class="login-link">Login</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+</body>
+</html>
